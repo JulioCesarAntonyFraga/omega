@@ -1,0 +1,44 @@
+<br>
+<section class="produtos container">
+    <h3>Bem Vindo ao setor Produtos!</h3>
+    <br>
+
+    <div class="row row-cols-1 row-cols-md-3">
+
+        {{#each produtos}}
+
+            <!-- Declaração do formulário -->  
+            <form method="post" target="pagseguro"  
+            action="https://pagseguro.uol.com.br/v2/checkout/payment.html">
+                    
+                <!-- Campos obrigatórios -->  
+                <input name="receiverEmail" type="hidden" value="mateuswinter2002@gmail.com">  
+                <input name="currency" type="hidden" value="BRL">  
+
+                <!-- Itens do pagamento (ao menos um item é obrigatório) -->  
+                <input name="itemId1" type="hidden" value="0001">  
+                <input name="itemDescription1" type="hidden" value="{{nome}}">  
+                <input name="itemAmount1" type="hidden" value="{{preco}}">  
+                <input name="itemQuantity1" type="hidden" value="1">  
+                <input name="itemWeight1" type="hidden" value="1000">  
+                
+                <!-- Informações de frete (opcionais) -->  
+                <input name="shippingType" type="hidden" value="3">  
+
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <img src="/{{img}}" class="card-img-top" alt="Produto">
+                        <div class="card-body">
+                            <h5 class="card-title">{{nome}}</h5>
+                            <p class="card-text">R${{preco}}</p>
+                        </div>
+                        <!-- submit do form (obrigatório) -->  
+                        <input alt="Pague com PagSeguro" name="submit" type="submit" value="Comprar" class="btn" style="width: 40%; margin-left: 30%; margin-bottom: 20px; background-color: rgb(88, 194, 88); color: white;"/>  
+                    </div>
+                </div>
+
+            </form> 
+
+        {{/each}}
+    </div>
+</section>

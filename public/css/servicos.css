@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Freight Sans';
+    src: url('../../fonts/fonte.eot')/*Para navegadores Internet Explorer*/;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.corpo{
+
+    width: 70%;
+    margin-left: 15%;
+
+}
+p{
+
+    color: #808080 !important;
+
+}
+h2{
+
+    color: #4F4F4F !important;
+    text-align: left !important;
+
+}

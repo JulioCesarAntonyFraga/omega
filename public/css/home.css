@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Freight Sans';
+    src: url('../../fonts/fonte.eot')/*Para navegadores Internet Explorer*/;
+    font-weight: normal;
+    font-style: normal;
+}
+p{
+
+    color: #808080 !important;
+
+}
+
+@media only screen and (min-width: 600px) {
+
+
+    .carousel{
+    
+        width: 90%;
+        margin-left: 5%;
+    
+    }
+    .carousel-item img{
+        width: 100%;
+    }
+    .carousel-item {
+        height: 500px;
+    }
+    
+
+}
+@media only screen and (max-width: 600px) {
+
+
+    .carousel-item{
+    
+        height: 200px;
+    
+    }
+
+    
+
+}

@@ -1,0 +1,93 @@
+
+#my_carousel, #cabecalho{
+
+    width: 90%;
+    margin-left: 5%;
+    background-color: white;
+
+}
+#mininav{
+    font-size: 14px;
+}
+.mininav_li{
+
+    margin-top: -3%;
+
+}
+
+a{
+    color: #808080 !important;
+}
+a:hover{
+    color: #4F4F4F !important;
+}
+
+#nav_input{
+
+    transition: 0.7s;
+    background: transparent;
+    border: none;
+
+    border-bottom: 1px solid rgb(41, 41, 41);
+    color: black;
+    width: 50%;
+
+}
+#nav_input:focus{
+
+    outline: none;
+    transition: 0.7s;
+    border-bottom: 1px solid #90EE90;
+    width: 60%;
+
+}
+
+#navbar-primary .navbar-nav { 
+    background: #ededed;
+    width: 100%;
+    text-align: center;
+}
+nav a {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+li {
+    display: inline-block;
+    float: none;
+        
+}
+
+
+#phone_search{
+
+    transition: 0.7s;
+    background: transparent;
+    border: none;
+
+    border-bottom: 1px solid rgb(41, 41, 41);
+    color: black;
+    width: 70%;
+
+}
+#phone_search:focus{
+
+    outline: none;
+    transition: 0.7s;
+    border-bottom: 1px solid rgb(14, 172, 14);
+    width: 80%;
+
+}
+
+
+.footer-titles{
+
+    color: #4F4F4F;
+
+}
+footer img{
+
+    width: 20px; 
+    height: 20px;
+    margin: 0 10px 0 0;
+
+}

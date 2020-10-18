@@ -1,0 +1,32 @@
+{{#each produtos}}
+    <!-- Declaração do formulário -->  
+    <form method="post" target="pagseguro"  
+    action="https://pagseguro.uol.com.br/v2/checkout/payment.html">  
+            
+        <!-- Campos obrigatórios -->  
+        <input name="receiverEmail" type="hidden" value="emailVendedor@email.com">  
+        <input name="currency" type="hidden" value="BRL">  
+
+        <!-- Itens do pagamento (ao menos um item é obrigatório) -->  
+        <input name="itemId1" type="hidden" value="0001">  
+        <input name="itemDescription1" type="hidden" value="{{dataValues.nome}}">  
+        <input name="itemAmount1" type="hidden" value="{{dataValues.preco}}">  
+        <input name="itemQuantity1" type="hidden" value="1">  
+        <input name="itemWeight1" type="hidden" value="1000">  
+        
+        <!-- Informações de frete (opcionais) -->  
+        <input name="shippingType" type="hidden" value="3">  
+
+        <!-- Dados do comprador (opcionais) -->  
+        <input name="senderName" type="hidden" value="Nome do usuário">  
+        <input name="senderAreaCode" type="hidden" value="51">  
+        <input name="senderPhone" type="hidden" value="992826801">  
+        <input name="senderEmail" type="hidden" value="emailDoUsuario@email.com">  
+
+        <!-- submit do form (obrigatório) -->  
+        <input alt="Pague com PagSeguro" name="submit"  type="image"  
+    src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/120x53-pagar.gif"/>  
+    </form>  
+
+    <hr>
+{{/each}}
