@@ -20,13 +20,3 @@ const Produto = new Schema({
 })
 
 mongoose.model('produtos', Produto)
-
-const novoProduto = mongoose.model('produtos')
-
-new novoProduto({
-
-    nome: 'novo produto',
-    preco: '40.00',
-    img: 'images/serv2.jpg'
-
-}).save()
