@@ -21,14 +21,3 @@ const Sustentabilidade = new Schema({
 
 mongoose.model('sustentabilidade', Sustentabilidade)
 
-
-
-const novo = mongoose.model('sustentabilidade')
-
-new novo({
-
-    nome: 'sustentabilidade 1',
-    preco: '32.30',
-    img: 'images/serv9.jpg'
-
-}).save()
