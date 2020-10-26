@@ -13,6 +13,12 @@ h1, h2, h3, h4{
     color: #4F4F4F !important;
 }
 
+.carouselExampleIndicators p{
+
+    color: white;
+
+}
+
 @media only screen and (min-width: 600px) {
 
 
