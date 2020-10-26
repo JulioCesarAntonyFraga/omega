@@ -13,9 +13,9 @@ h1, h2, h3, h4{
     color: #4F4F4F !important;
 }
 
-.carouselExampleIndicators p{
+.carousel-p{
 
-    color: white;
+    color: rgba(255, 255, 255, 0.76) !important;
 
 }
 
