@@ -21,8 +21,23 @@ h1, h2, h3, h4{
   position: relative;
 }
 
-.slideshow-container img{
-    height: 500px;
+@media screen and (max-width: 600px){
+
+  .slideshow-container img{
+
+      height: 200px;
+
+  }
+
+}
+@media screen and (min-width: 600px){
+
+  .slideshow-container img{
+
+      height: 500px;
+
+  }
+
 }
 
 /* Hide the images by default */
