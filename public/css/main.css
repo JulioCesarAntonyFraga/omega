@@ -1,80 +1,21 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+    .myContent, .topnav{
 
-#my_carousel, #cabecalho{
-
-    width: 90%;
-    margin-left: 5%;
-    background-color: white;
-
-}
-#mininav{
-    font-size: 14px;
-}
-.mininav_li{
-
-    margin-top: -3%;
+        width: 100%;
+    
+    }
 
 }
+@media only screen and (min-width: 992px) {
+    
+    .myContent, .topnav{
 
-a{
-    color: #808080 !important;
-}
-a:hover{
-    color: #4F4F4F !important;
-}
-
-#nav_input{
-
-    transition: 0.7s;
-    background: transparent;
-    border: none;
-
-    border-bottom: 1px solid rgb(41, 41, 41);
-    color: black;
-    width: 50%;
-
-}
-#nav_input:focus{
-
-    outline: none;
-    transition: 0.7s;
-    border-bottom: 1px solid #90EE90;
-    width: 60%;
-
-}
-
-#navbar-primary .navbar-nav { 
-    background: #ededed;
-    width: 100%;
-    text-align: center;
-}
-nav a {
-    padding-left: 30px;
-    padding-right: 30px;
-}
-li {
-    display: inline-block;
-    float: none;
-        
-}
-
-
-#phone_search{
-
-    transition: 0.7s;
-    background: transparent;
-    border: none;
-
-    border-bottom: 1px solid rgb(41, 41, 41);
-    color: black;
-    width: 70%;
-
-}
-#phone_search:focus{
-
-    outline: none;
-    transition: 0.7s;
-    border-bottom: 1px solid rgb(14, 172, 14);
-    width: 80%;
+        width: 90%;
+        margin-left: 5%;
+    
+    }
 
 }
 
@@ -91,3 +32,31 @@ footer img{
     margin: 0 10px 0 0;
 
 }
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: none;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #4F4F4F;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    text-decoration: none;
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
