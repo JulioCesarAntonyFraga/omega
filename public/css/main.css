@@ -1,3 +1,17 @@
+@media screen and (min-width: 600px) {
+
+    .phoneOnly{
+
+        display: none !important;
+
+    }
+    .mininav{
+
+        display: block;
+
+    }
+
+}
 @media screen and (max-width: 600px){
 
     .myContent, .topnav{
@@ -42,6 +56,8 @@ footer img{
     margin: 0 10px 0 0;
 
 }
+
+
 
 
 /* Add a black background color to the top navigation */
@@ -96,3 +112,40 @@ footer img{
       text-align: left;
     }
   }
+
+
+/* Add a black background color to the top navigation */
+.mininav {
+    background-color: none;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.mininav a {
+    float: right;
+    display: block;
+    color: #4F4F4F;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 15px;
+}
+.mininav a:hover {
+
+    cursor: default;
+
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.mininav .icon {
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .mininav{
+
+        display: none;
+
+    }
+}
