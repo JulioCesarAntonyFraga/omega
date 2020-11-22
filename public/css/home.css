@@ -28,6 +28,11 @@ h1, h2, h3, h4{
       height: 200px;
 
   }
+  .desktopOnly{
+
+    display: none;
+
+  }
 
 }
 @media screen and (min-width: 600px){
@@ -35,6 +40,11 @@ h1, h2, h3, h4{
   .slideshow-container img{
 
       height: 500px;
+
+  }
+  .mobileOnly{
+
+    display: none !important;
 
   }
 
