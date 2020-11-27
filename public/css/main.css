@@ -1,40 +1,24 @@
 @media screen and (min-width: 600px) {
 
-    .phoneOnly{
-
-        display: none !important;
-
-    }
     .mininav{
 
         display: block;
-
-    }
-    #mobileLogo{
-
-        display: none;
 
     }
 
 }
 @media screen and (max-width: 600px){
 
-    .myContent, .topnav{
+    .myContent{
 
         width: 100%;
 
     }
-    #desktopLogo{
-
-        display: none;
-
-    }
 
 }
+@media screen and (min-width: 576px){
 
-@media screen and (min-width: 992px){
-
-    .myContent, .topnav, .mininav{
+    .myContent, .mininav{
 
         width: 90%;
         margin-left: 5%;
@@ -67,57 +51,6 @@ footer img{
 
 }
 
-
-
-
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: none;
-    overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    display: block;
-    color: #4F4F4F;
-    text-align: center;
-    padding: 14px 14px 0 0;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-    display: none;
-}
-
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-  }
-
-
 /* Add a black background color to the top navigation */
 .mininav {
     background-color: none;
@@ -132,7 +65,7 @@ footer img{
     text-align: center;
     padding: 5px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
 }
 .mininav a:hover {
 
@@ -146,10 +79,181 @@ footer img{
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .mininav{
 
         display: none;
 
     }
+}.header-fixed {
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: none;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  line-height: 10px;
+}
+
+
+.navbar nav {
+  flex: 8;
+}
+
+.navbar label {
+user-select: none;
+cursor: pointer;
+padding: 28px 20px;
+position: relative;
+z-index: 3;
+}
+
+.navbar label i {
+height: 2px;
+position: relative;
+transition: background .2s ease-out;
+width: 18px;
+font-style: normal;
+font-weight: normal;
+}
+.navbar label i:before,
+.navbar label i:after {
+content: '';
+height: 100%;
+position: absolute;
+transition: all .2s ease-out;
+width: 100%;
+}
+.navbar label i,
+.navbar label i:before,
+.navbar label i:after {
+display: block;
+background: rgb(48, 48, 48);  
+}
+.navbar label i:before {
+top: 5px;
+}
+.navbar label i:after {
+top: -5px;
+}
+
+.navbar #navbar-toggle {
+display: none;
+}
+
+.header #navbar-toggle:checked ~ .menu {
+visibility: visible;
+opacity: 0.99;
+}
+.header #navbar-toggle:checked ~ label {
+background: none;
+border-radius: 50%;    
+}
+.header #navbar-toggle:checked ~ label i {
+background: transparent;
+}
+.header #navbar-toggle:checked ~ label i:before {
+transform: rotate(-45deg);
+}
+.header #navbar-toggle:checked ~ label i:after {
+transform: rotate(45deg);
+}
+.header #navbar-toggle:checked ~ label:not(.steps) i:before,
+.header #navbar-toggle:checked ~ label:not(.steps) i:after {
+top: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar nav {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50%;
+    transition: all 0.3s ease-out;
+    display: table;
+    background: #ddd;
+  }
+  .navbar{
+
+    height: 35px;
+
+  }
+  .navbar nav ul {
+    margin: 0;
+    padding: 80px 0;
+    display: table-cell;
+  }
+  .navbar nav li {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 15px;
+    min-height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  .navbar nav li:hover {
+    background: #212121;
+  }
+  .navbar nav li:hover a {
+    color: #fff;
+    transition: all 0.3s ease-out;
+  }
+  .navbar nav li a {
+    color: #212121;
+  }
+
+  #desktopLogo{
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .navItemsMobile{
+    display: none !important;
+    
+  }
+
+  .logoNavMobile{
+    display: none;
+  }
+
+  .navbar nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    list-style: none;
+  }
+  .navbar nav li {
+    flex: 1;
+  }
+  .navbar nav li a {
+    display: block;
+    padding: 0 8px;
+    font-size: 16px;
+    line-height: 60px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .navbar nav li.active {
+    background: #555;  
+  }
+  .navbar label {
+    display: none;
+  }
+}
+
